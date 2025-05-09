@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive data usage charts from Rabata Technologies. Analyze download and upload traffic by month.">
+    <meta name="keywords" content="data charts, traffic analysis, data usage, Rabata Technologies">
+    <meta name="author" content="Rabata Technologies">
+    <meta name="robots" content="index, follow">
+    <title>Data Traffic Analysis | Rabata Technologies</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="charts.css">
+    <!-- 
+        Оставил коммент в pages/news/index.html
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * data:; connect-src 'self' https://newsapi.org https://content.guardianapis.com;">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Структурированные данные Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Data Traffic Analysis | Rabata Technologies",
+      "description": "Interactive data usage charts from Rabata Technologies",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rabata Technologies",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/assets/Logotype.svg"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="/" aria-label="Rabata Technologies Home Page">
+                    <img src="../../Assets/Logotype.svg" alt="Rabata Technologies logo" width="120" height="40">
+                </a>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                <a href="../charts/index.html" class="nav-button active" aria-current="page">Charts</a>
+                <a href="../news/index.html" class="nav-button">News</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="charts-section">
+                <h1>Charts</h1>
+                
+                <div class="charts-summary">
+                    <div class="chart-info">
+                        <h2>Chart 1</h2>
+                        <p class="chart-value chart-value-1"></p>
+                    </div>
+                    <div class="chart-info">
+                        <h2>Chart 2</h2>
+                        <p class="chart-value chart-value-2"></p>
+                    </div>
+                </div>
+                
+                <div class="chart-navigation">
+                    <button class="nav-arrow prev-button" aria-label="Previous month">
+                        <span class="arrow-left">←</span>
+                    </button>
+                    
+                    <div class="month-selector">
+                        <button class="month-button" data-month="8" data-year="2024">Aug, 24</button>
+                        <button class="month-button active" data-month="9" data-year="2024">Sep, 24</button>
+                        <button class="month-button" data-month="10" data-year="2024">Oct, 24</button>
+                        <button class="month-button" data-month="11" data-year="2024">Nov, 24</button>
+                        <button class="month-button" data-month="12" data-year="2024">Dec, 24</button>
+                        <button class="month-button" data-month="1" data-year="2025">Jan, 25</button>
+                        <button class="month-button" data-month="2" data-year="2025">Feb, 25</button>
+                        <button class="month-button" data-month="3" data-year="2025">Mar, 25</button>
+                        <button class="month-button" data-month="4" data-year="2025">Apr, 25</button>
+                        <button class="month-button" data-month="5" data-year="2025">May, 25</button>
+                        <button class="month-button" data-month="6" data-year="2025">Jun, 25</button>
+                    </div>
+                    
+                    <button class="nav-arrow next-button" aria-label="Next month">
+                        <span class="arrow-right">→</span>
+                    </button>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="dataChart" aria-label="Data usage chart showing download and upload traffic" role="img"></canvas>
+                    <div class="chart-tooltip" id="chartTooltip">
+                        <div class="tooltip-date">3 Aug</div>
+                        <div class="tooltip-value-1">652 GB</div>
+                        <div class="tooltip-value-2">223 GB</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="../../js/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        Внимание! Для разработки мы разрешили загрузку изображений с любых доменов (img-src * data:).
+        Это необходимо для работы с The Guardian API, который возвращает изображения с различных доменов.
+        В продакшн-окружении рекомендуется использовать более строгую политику безопасности или прокси для изображений.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * data:; connect-src 'self' https://newsapi.org https://content.guardianapis.com;">
+    <meta name="description" content="Latest news from Rabata Technologies. Stay updated with recent events, technology trends, and industry news.">
+    <meta name="keywords" content="news, technology news, latest updates, Rabata Technologies">
+    <meta name="author" content="Rabata Technologies">
+    <meta name="robots" content="index, follow">
+    <title>News and Latest Updates | Rabata Technologies</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="news.css">
+    <!-- Структурированные данные Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "News and Latest Updates | Rabata Technologies",
+      "description": "Latest news from Rabata Technologies",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rabata Technologies",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/assets/Logotype.svg"
+        }
+      },
+      "datePublished": "2025-05-09T09:00:00+03:00",
+      "dateModified": "2025-05-09T09:59:00+03:00"
+    }
+    </script>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="/" aria-label="Rabata Technologies Home Page">
+                    <img src="../../Assets/Logotype.svg" alt="Rabata Technologies logo" width="120" height="40">
+                </a>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                <a href="../charts/index.html" class="nav-button">Charts</a>
+                <a href="../news/index.html" class="nav-button active" aria-current="page">News</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-news">
+            <div class="container">
+                <div class="featured-news-layout">
+                    <div id="main-story" class="main-story">
+                        <!-- Главная новость будет загружена динамически -->
+                    </div>
+                    <div id="side-stories" class="side-stories">
+                        <!-- Боковые новости будут загружены динамически -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-container">
+            <div class="container">
+                <h1>Latest News</h1>
+
+                <div class="news-grid">
+                    <!-- Новости будут загружены динамически через JavaScript -->
+                </div>
+
+                <div class="load-more-container">
+                    <button id="load-more" class="load-more-button">Read more</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="../../js/news.js"></script>
+</body>
+</html>
