@@ -1,27 +1,24 @@
-# The Guardian API
+# The Guardian API - Новостное приложение
 
-## Быстрый старт
+В приложение уже добавлен рабочий API ключ 'test'. Вам не нужно получать свой ключ или регистрироваться на сайте The Guardian.
 
-### 1. Получение API ключа The Guardian
+## Видеоинструкция
 
-Для работы необходим API ключ The Guardian:
+Для наглядности мы записали короткую видеоинструкцию по запуску проекта:
 
-1. Перейдите на сайт [The Guardian Open Platform](https://open-platform.theguardian.com/access/)
-2. Нажмите на кнопку "Register for a key"
-3. Заполните форму регистрации и подтвердите email
-4. Получите API ключ в письме или в личном кабинете
+[Смотреть видеоинструкцию](https://drive.google.com/file/d/1WXqIQHNtZL0VrDtgMQA-Litp92xilMQ_/view?usp=drive_link)
 
-### 2. Установка API ключа в проект
+## Как запустить проект
 
-Откройте файл `js/config.js` и замените значение `test` на ваш API ключ:
+### Запуск через Live Server в VS Code
 
-```javascript
-const Config = {
-    api: {
-        guardianApi: {
-            key: 'ВАШ_API_КЛЮЧ', // Замените 'test' на ваш ключ
-            baseUrl: '[https://content.guardianapis.com](https://content.guardianapis.com)',
-            // ...
-        }
-    }
-};
+1. Откройте проект в VS Code
+2. Установите расширение Live Server (если еще не установлено)
+3. Откройте файл `index.html` в корне проекта
+4. Нажмите на кнопку "Go Live" в нижней панели VS Code
+
+
+
+
+
+

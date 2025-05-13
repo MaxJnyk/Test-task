@@ -1,7 +1,7 @@
 const Config = {
     api: {
         guardianApi: {
-            key: 'test', // Замените на ваш реальный API ключ после регистрации
+            key: 'test', // Тестовый ключ The Guardian
             baseUrl: 'https://content.guardianapis.com',
             endpoints: {
                 search: '/search',
